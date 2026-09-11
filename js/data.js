@@ -120,11 +120,96 @@ const MHS_ARCHIVES = {
     },
     {
       numeral: "IV",
-      role: "Assistant Vice President (formerly Head of PR)",
-      institution: "NUCES FinTech Society",
-      period: "September, 2025 – Present",
+      role: "Head Event Management",
+      institution: "ACM - NUCES Lahore",
+      period: "Sep 2026 – Present",
       location: "FAST-NUCES",
-      treatise: "Commanded the public relations, corporate sponsorship, and strategic communications division of the NUCES FinTech Society. Spearheaded corporate market positioning for the inaugural FAST-NUCES FinTech Summit, elevating organizational commercial profitability by 400%. Led an executive department of 40 scholars, orchestrating corporate alliances, resource distribution, and summit delegate operations."
+      bullets: [
+        "Managing a department of over 20 individuals, delegating tasks to drive event success."
+      ]
+    },
+    {
+      numeral: "V",
+      institution: "NUCES FinTech Society",
+      totalTenure: "1 yr 1 mo",
+      location: "Lahore, Punjab, Pakistan",
+      positions: [
+        {
+          role: "Assistant Vice President",
+          period: "Jun 2026 – Present",
+          duration: "4 mos",
+          bullets: [
+            "Commanding executive operations, strategic communications, and corporate positioning for the NUCES FinTech Society."
+          ]
+        },
+        {
+          role: "Head of Public Relations",
+          employmentType: "Full-time",
+          period: "Sep 2025 – Jun 2026",
+          duration: "10 mos",
+          location: "Lahore, Punjab, Pakistan",
+          bullets: [
+            "Managed public relations and affairs of the NUCES FinTech Society.",
+            "Improved the marketability of the 1st ever FAST-NUCES FinTech Summit, improving profitability up to 4X.",
+            "Headed a department of 40 people, facilitating registration and resource allocation."
+          ]
+        }
+      ]
+    },
+    {
+      numeral: "VI",
+      institution: "Google Developer Student Clubs",
+      totalTenure: "2 yrs 1 mo",
+      employmentType: "Full-time",
+      location: "Lahore, Punjab, Pakistan",
+      positions: [
+        {
+          role: "Head Outreach",
+          period: "Oct 2024 – Sep 2025",
+          duration: "1 yr",
+          bullets: [
+            "Responsible for networking in the industry and extending invitations to corporations and individuals on behalf of Google Developers Student Club FAST-NUCES Lahore.",
+            "Contacting and setting up seminars in collaboration with guest speakers to provide insightful information to the wider student body at FAST-NUCES."
+          ]
+        },
+        {
+          role: "Associate",
+          period: "Sep 2023 – Oct 2024",
+          duration: "1 yr 2 mos",
+          bullets: [
+            "Served as part of Information and Coordination Team.",
+            "Worked with the university administration and Google Developers society to host multiple guest seminars.",
+            "Initiated team building activities on campus boosting student morale and productivity.",
+            "Proposed and engineered innovative solutions to problems faced by the student body on campus."
+          ]
+        }
+      ]
+    },
+    {
+      numeral: "VII",
+      role: "Ambassador",
+      institution: "Lahore University of Management Sciences (LUMS)",
+      period: "Dec 2024 – Jan 2025",
+      duration: "2 mos",
+      location: "Lahore, Pakistan",
+      bullets: [
+        "Ambassador for LUMS Sports Fest (LSF) by LUMS Sports Society.",
+        "Increased LSF reach and awareness across university cohorts.",
+        "Facilitated delegate registration, onboarding logistics, and attendee operations."
+      ]
+    },
+    {
+      numeral: "VIII",
+      role: "Associate",
+      institution: "Voice Debating Society NUCES",
+      period: "Nov 2023 – Jun 2024",
+      duration: "8 mos",
+      location: "Lahore, Punjab, Pakistan",
+      bullets: [
+        "Associate - Voice MUN Wing.",
+        "Delegate for National Level Parliamentary debates.",
+        "DISEC / UNSC foreign relations and international security discourse."
+      ]
     }
   ],
 

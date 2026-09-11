@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Gallery // Optical Artifact &amp; Visual Archive // Muhammad Hassaan Bin Saqib</title>
+  <meta name="description" content="Visual photography showcase, 3D Nikon optical model, VSCO portfolio, and animated bento grid by Muhammad Hassaan Bin Saqib." />
+  <meta name="theme-color" content="#050507" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23050507' rx='6'/%3E%3Ccircle cx='16' cy='16' r='8' fill='%23ffe500'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%23050507'/%3E%3Ccircle cx='16' cy='16' r='2' fill='%23ffe500'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,600&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="gallery-page marble-stipple">
+
+  <div class="paper-texture-overlay" aria-hidden="true"></div>
+  <div class="newspaper-halftone-bg" aria-hidden="true"></div>
+
+  <!-- Dark Comic Navbar -->
+  <header class="comic-navbar">
+    <a href="index.html" class="comic-brand">
+      <div class="comic-banana-icon" aria-hidden="true">🍌</div>
+      <div class="brand-meta">
+        <span class="brand-name">HASSAAN</span>
+        <span class="brand-issue">FAST-NUCES SE '27 // ISSUE NO. 01</span>
+      </div>
+    </a>
+
+    <ul class="comic-nav-links" id="navLinks">
+      <li><a href="index.html" class="comic-nav-link">OVERVIEW</a></li>
+      <li><a href="projects.html" class="comic-nav-link">SELECTED WORKS</a></li>
+      <li><a href="experience.html" class="comic-nav-link">TRACK RECORD</a></li>
+      <li><a href="credentials.html" class="comic-nav-link">CREDENTIALS</a></li>
+      <li><a href="skills.html" class="comic-nav-link">ARSENAL</a></li>
+      <li><a href="gallery.html" class="comic-nav-link is-active" aria-current="page">GALLERY</a></li>
+      <li>
+        <a href="contact.html" class="comic-nav-action">
+          <span>CONTACT</span>
+          <span aria-hidden="true">↗</span>
+        </a>
+      </li>
+    </ul>
+
+    <button class="mobile-menu-btn" id="mobileNavToggle" type="button" aria-label="Toggle menu">
+      ☰
+    </button>
+  </header>
+
+  <!-- 1. First Item: 3D Nikon Camera Hero Stage -->
+  <section class="camera-hero-stage" id="cameraHero">
+    <!-- Viewfinder Reticles -->
+    <div class="camera-viewfinder-reticle reticle-tl" aria-hidden="true"></div>
+    <div class="camera-viewfinder-reticle reticle-tr" aria-hidden="true"></div>
+    <div class="camera-viewfinder-reticle reticle-bl" aria-hidden="true"></div>
+    <div class="camera-viewfinder-reticle reticle-br" aria-hidden="true"></div>
+    <div class="reticle-crosshair" aria-hidden="true"></div>
+
+    <div class="camera-hud-header">
+      <div class="camera-vol-tag">
+        <span class="camera-hud-pulse" aria-hidden="true"></span>
+        <span>OPTICAL ARTIFACT // 3D DOSSIER</span>
+      </div>
+      <div class="split-flap-mount" data-split-flap="NIKON 35MM" data-font-size="34px"></div>
+      <p class="camera-stage-sub">SLR Chassis &middot; Mechanical Shutter Mechanics &middot; Photometric Studio Lighting</p>
+    </div>
+
+    <!-- 3D WebGL Canvas Container -->
+    <div class="camera-canvas-wrap" id="cameraCanvasContainer" role="region" aria-label="Interactive 3D Nikon Camera Model">
+      <!-- Loading progress box -->
+      <div class="camera-loader-box" id="cameraLoaderBox">
+        <div class="camera-shutter-spinner" aria-hidden="true"></div>
+        <span class="camera-loader-text" id="cameraLoaderText">INITIALIZING OPTICS...</span>
+        <div class="camera-loader-bar-wrap">
+          <div class="camera-loader-bar" id="cameraProgressBar"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Streamlined Gallery Section: Split Flap "GALLERY", VSCO Button, Chevron, & React Bits Drift Wall -->
+  <section class="gallery-streamlined-section" id="gallerySection">
+    <div class="gallery-streamlined-header">
+      <div class="split-flap-mount" data-split-flap="GALLERY,OPTICS,ARCHIVE" data-font-size="52px"></div>
+
+      <div class="gallery-action-bar">
+        <a 
+          href="https://vsco.co/ihassaanbinsaqib/gallery" 
+          target="_blank" 
+          rel="noopener" 
+          class="btn-vsco-primary"
+        >
+          <span>EXPLORE FULL VSCO GALLERY</span>
+          <span aria-hidden="true">↗</span>
+        </a>
+
+        <!-- Animated Down Chevron Button -->
+        <button class="gallery-chevron-btn" id="galleryChevronBtn" type="button" aria-label="Scroll down into Drift Wall">
+          <div class="gallery-chevron-circle">
+            <svg class="gallery-chevron-svg" viewBox="0 0 24 24" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+          <span class="gallery-chevron-label">EXPLORE WALL ⌄</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- React Bits Drift Wall Container -->
+    <div class="drift-wall-stage" id="driftWallContainer" role="region" aria-label="Interactive drifting wall of photography tiles"></div>
+  </section>
+
+  <!-- Fullscreen Lightbox Modal -->
+  <div class="gallery-lightbox-modal" id="galleryLightbox" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="lightbox-content-box">
+      <button class="lightbox-close-btn" id="lightboxCloseBtn" type="button" aria-label="Close photo preview">✕</button>
+      <div class="lightbox-img-frame">
+        <img id="lightboxImg" src="assets/banana_hero.jpg" alt="Showcase frame preview" />
+      </div>
+      <div class="lightbox-meta-bar">
+        <span class="lightbox-title" id="lightboxTitle">Frame Title</span>
+        <span class="lightbox-specs" id="lightboxSpecs">f/1.8 &middot; 1/800s &middot; ISO 100</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dark Comic Footer -->
+  <footer class="comic-footer">
+    <div class="footer-brand-title">MUHAMMAD HASSAAN BIN SAQIB</div>
+    <p class="footer-quote">&ldquo;Simple on the surface, mathematically sound underneath.&rdquo;</p>
+    <p class="footer-legal">
+      GALLERY EDITION &middot; 2026 &middot; NIKON 35MM OPTICS &middot; ALL RIGHTS RESERVED
+    </p>
+  </footer>
+
+  <script type="importmap">
+  {
+    "imports": {
+      "lenis": "https://cdn.jsdelivr.net/npm/lenis@1.1.18/+esm",
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+  <script src="js/data.js"></script>
+  <script src="js/media-manifest.js"></script>
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/camera-viewer.js"></script>
+  <script src="js/split-flap.js"></script>
+  <script src="js/drift-wall.js"></script>
+</body>
+</html>

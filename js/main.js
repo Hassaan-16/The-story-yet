@@ -54,6 +54,62 @@ import { getTechIcon } from './icons.js';
     if (!container || !ARCHIVES || !ARCHIVES.annals) return;
 
     container.innerHTML = ARCHIVES.annals.map((a) => {
+      // Multi-position organization (e.g. NUCES FinTech Society, GDSC)
+      if (a.positions && a.positions.length > 0) {
+        const positionsHtml = a.positions.map((p, idx) => {
+          const bulletsHtml = p.bullets && p.bullets.length > 0
+            ? `<ul class="annal-bullets-list">${p.bullets.map(b => `<li>${b}</li>`).join('')}</ul>`
+            : (p.treatise ? `<p class="annal-narrative">${p.treatise}</p>` : '');
+
+          const metaParts = [p.period, p.duration, p.employmentType, p.location].filter(Boolean);
+          const metaString = metaParts.join(' &middot; ');
+
+          return `
+            <div class="annal-nested-role ${idx < a.positions.length - 1 ? 'has-subsequent' : ''}">
+              <div class="nested-role-spine">
+                <span class="nested-role-dot" aria-hidden="true"></span>
+              </div>
+              <div class="nested-role-details">
+                <div class="nested-role-top">
+                  <h4 class="nested-role-name">${p.role}</h4>
+                  <span class="annal-meta-date">${metaString}</span>
+                </div>
+                ${bulletsHtml}
+              </div>
+            </div>
+          `;
+        }).join('');
+
+        const orgMetaParts = [a.employmentType, a.location].filter(Boolean);
+        const orgMetaString = orgMetaParts.join(' &middot; ');
+
+        return `
+          <article class="comic-annal-item">
+            <div class="annal-badge-box">${a.numeral}</div>
+            <div class="annal-body-panel">
+              <div class="annal-top-row">
+                <div>
+                  <h3 class="annal-role-title">${a.institution}</h3>
+                  ${a.totalTenure ? `<span class="annal-tenure-tag">${a.totalTenure}</span>` : ''}
+                </div>
+                ${orgMetaString ? `<span class="annal-meta-date">${orgMetaString}</span>` : ''}
+              </div>
+              <div class="annal-nested-roles-container">
+                ${positionsHtml}
+              </div>
+            </div>
+          </article>
+        `;
+      }
+
+      // Single position
+      const bulletsHtml = a.bullets && a.bullets.length > 0
+        ? `<ul class="annal-bullets-list">${a.bullets.map(b => `<li>${b}</li>`).join('')}</ul>`
+        : (a.treatise ? `<p class="annal-narrative">${a.treatise}</p>` : '');
+
+      const metaParts = [a.period, a.duration, a.employmentType, a.location].filter(Boolean);
+      const metaString = metaParts.join(' &middot; ');
+
       return `
         <article class="comic-annal-item">
           <div class="annal-badge-box">${a.numeral}</div>
@@ -63,10 +119,10 @@ import { getTechIcon } from './icons.js';
                 <h3 class="annal-role-title">${a.role}</h3>
                 <span class="annal-org">${a.institution}</span>
               </div>
-              <span class="annal-meta-date">${a.period} &middot; ${a.location}</span>
+              <span class="annal-meta-date">${metaString}</span>
             </div>
 
-            <p class="annal-narrative">${a.treatise}</p>
+            ${bulletsHtml}
           </div>
         </article>
       `;

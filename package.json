@@ -1,0 +1,21 @@
+{
+  "name": "the-story-yet",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portfolio and Dossier of Muhammad Hassaan Bin Saqib",
+  "scripts": {
+    "build": "node scripts/sync-media.js",
+    "sync": "node scripts/sync-media.js",
+    "watch": "node scripts/watch-media.js",
+    "dev": "node scripts/watch-media.js"
+  },
+  "keywords": [
+    "portfolio",
+    "threejs",
+    "audio-player",
+    "gallery",
+    "3d"
+  ],
+  "author": "Muhammad Hassaan Bin Saqib",
+  "license": "ISC"
+}
