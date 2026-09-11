@@ -202,7 +202,9 @@ body {
   transition: all 0.2s ease;
 }
 
-.comic-nav-link:hover {
+.comic-nav-link:hover,
+.comic-nav-link.is-active,
+.comic-nav-link[aria-current="page"] {
   background: var(--pop-yellow);
   border-color: var(--ink-black);
   box-shadow: 2px 2px 0px var(--ink-black);
@@ -226,9 +228,11 @@ body {
   transition: all 0.2s var(--ease-snap);
 }
 
-.comic-nav-action:hover {
-  background: var(--olive-green);
-  color: var(--bg-white);
+.comic-nav-action:hover,
+.comic-nav-action.is-active,
+.comic-nav-action[aria-current="page"] {
+  background: var(--pop-yellow);
+  color: var(--ink-black);
   transform: translate(-2px, -2px);
   box-shadow: 5px 5px 0px var(--ink-black);
 }
@@ -460,6 +464,19 @@ main {
   max-width: var(--max-w);
   margin: 0 auto;
   padding: 5rem clamp(1.2rem, 4vw, 3.5rem) 7rem;
+}
+
+.comic-page-main {
+  padding-top: calc(var(--header-h) + 2.8rem);
+  padding-bottom: 5rem;
+  min-height: calc(100vh - var(--header-h));
+  display: flex;
+  flex-direction: column;
+}
+
+.comic-page-main--center {
+  justify-content: center;
+  padding-bottom: calc(var(--header-h) + 2.8rem);
 }
 
 .comic-chapter-head {

@@ -158,6 +158,29 @@ import { getTechIcon } from './icons.js';
         });
       });
     }
+
+    if (navLinks) {
+      const pathname = window.location.pathname;
+      const rawPage = pathname.split('/').pop().replace(/\.html$/, '');
+      const pageName = (!rawPage || rawPage === 'index') ? 'index' : rawPage;
+
+      navLinks.querySelectorAll('a').forEach((link) => {
+        const href = link.getAttribute('href');
+        if (!href) return;
+        const linkPage = href.split('#')[0].split('/').pop().replace(/\.html$/, '');
+        const isMatch = (pageName === 'index' && (linkPage === 'index' || linkPage === '')) ||
+                        (pageName !== 'index' && linkPage === pageName);
+
+        if (isMatch) {
+          link.classList.add('is-active');
+          link.setAttribute('aria-current', 'page');
+        } else if (pageName !== '') {
+          // ensure only matching page is active if route changed
+          link.classList.remove('is-active');
+          link.removeAttribute('aria-current');
+        }
+      });
+    }
   }
 
   document.addEventListener('DOMContentLoaded', () => {
