@@ -14,6 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,600&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="css/style.css" />
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 </head>
 <body class="marble-stipple">
 
@@ -89,6 +90,46 @@
           <span>GITHUB</span>
           <span aria-hidden="true">↗</span>
         </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="comic-halftone-band" aria-hidden="true"></div>
+
+  <section class="comic-showcase-section" id="artifact">
+    <div class="comic-showcase-header">
+      <div class="comic-showcase-tag">
+        <span class="comic-pulse-dot" aria-hidden="true"></span>
+        <span>INTERACTIVE ARTIFACT // 3D DOSSIER</span>
+      </div>
+      <h2 class="comic-showcase-title">Hardware Artifact: iPod Classic</h2>
+      <p class="comic-showcase-sub">
+        A physical exploration of tactile mechanical navigation, scroll-wheel ergonomics, and iconic industrial hardware. Drag manually to rotate and inspect in 3D.
+      </p>
+    </div>
+
+    <div class="comic-model-stage">
+      <model-viewer
+        src="assets/ipod_scroll_wheel.glb"
+        alt="3D interactive model of Apple iPod classic with scroll wheel"
+        camera-controls
+        disable-zoom
+        touch-action="pan-y"
+        shadow-intensity="1.6"
+        shadow-softness="0.7"
+        exposure="1.15"
+        interaction-prompt="none"
+        aria-label="Interactive 3D iPod model"
+        class="comic-model-viewer"
+      >
+        <div class="model-loading-indicator" slot="poster">
+          <span>INITIALIZING 3D ARTIFACT...</span>
+        </div>
+      </model-viewer>
+
+      <div class="comic-model-controls-hint">
+        <span class="hint-pill">🖱 Drag to Rotate</span>
+        <span class="hint-pill">📱 Touch to Orbit</span>
       </div>
     </div>
   </section>
