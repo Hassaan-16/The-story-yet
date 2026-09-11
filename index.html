@@ -14,7 +14,6 @@
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,600&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="css/style.css" />
-  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 </head>
 <body class="marble-stipple">
 
@@ -108,28 +107,13 @@
       </p>
     </div>
 
-    <div class="comic-model-stage">
-      <model-viewer
-        src="assets/ipod_scroll_wheel.glb"
-        alt="3D interactive model of Apple iPod classic with scroll wheel"
-        camera-controls
-        disable-zoom
-        touch-action="pan-y"
-        shadow-intensity="1.6"
-        shadow-softness="0.7"
-        exposure="1.15"
-        interaction-prompt="none"
-        aria-label="Interactive 3D iPod model"
-        class="comic-model-viewer"
-      >
-        <div class="model-loading-indicator" slot="poster">
-          <span>INITIALIZING 3D ARTIFACT...</span>
-        </div>
-      </model-viewer>
-
+    <div class="comic-model-stage" id="ipodContainer">
       <div class="comic-model-controls-hint">
-        <span class="hint-pill">🖱 Drag to Rotate</span>
-        <span class="hint-pill">📱 Touch to Orbit</span>
+        <span class="hint-pill">🖱 Drag to Rotate iPod</span>
+        <span class="hint-pill">🔘 Bottom: Play / Pause</span>
+        <span class="hint-pill">🔘 Top: Menu</span>
+        <span class="hint-pill">🔘 Sides: Skip</span>
+        <span class="hint-pill">🔒 Position Locked</span>
       </div>
     </div>
   </section>
@@ -147,11 +131,14 @@
   <script type="importmap">
   {
     "imports": {
-      "lenis": "https://cdn.jsdelivr.net/npm/lenis@1.1.18/+esm"
+      "lenis": "https://cdn.jsdelivr.net/npm/lenis@1.1.18/+esm",
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
     }
   }
   </script>
   <script src="js/data.js"></script>
   <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/ipod-player.js?v=3"></script>
 </body>
 </html>
