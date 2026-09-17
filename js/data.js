@@ -18,6 +18,36 @@ const MHS_ARCHIVES = {
     }
   },
 
+  education: [
+    {
+      institution: "National University of Computer and Emerging Sciences (FAST-NUCES)",
+      degree: "Bachelors in Software Engineering (B.S.S.E)",
+      date: "August 2023 - August 2027",
+      status: "ACTIVE SCHOLAR",
+      location: "Lahore",
+      stamp: "FAST-NUCES LAHORE",
+      details: "Pursuing rigorous scholarship in algorithms, distributed systems, operating system kernels, relational calculus, and machine learning foundations."
+    },
+    {
+      institution: "International School Lahore",
+      degree: "GCE Advanced Level – Computer Science, Physics and Mathematics",
+      date: "August 2021 - May 2023",
+      status: "COMPLETED",
+      location: "Lahore",
+      stamp: "ISL LAHORE",
+      details: "Cambridge International A-Levels focusing on Computer Science, Physics, and Advanced Mathematics."
+    },
+    {
+      institution: "Bahria Town School & College Lahore",
+      degree: "GCE Ordinary Level – Computer Sciences",
+      date: "August 2007 - July 2021",
+      status: "COMPLETED",
+      location: "Lahore",
+      stamp: "BTSC LAHORE",
+      details: "Cambridge International O-Levels with early concentration in Computer Sciences and core STEM disciplines."
+    }
+  ],
+
   treatises: [
     {
       numeral: "I",

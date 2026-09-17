@@ -61,35 +61,76 @@
       </div>
     </div>
 
-    <div class="hero-bottom-details">
-      <span class="hero-tag">ISSUE NO. 01 // PORTFOLIO DOSSIER</span>
-      <p class="hero-role-line">Backend Software Engineer &amp; Machine Learning Systems Builder</p>
-      <p class="hero-institution-line">National University of Computer and Emerging Sciences (FAST-NUCES) &middot; Class of 2027</p>
-      <p class="hero-bio-text">
-        Forging resilient backend architectures with Django &amp; Docker, quantitative financial risk models, and multi-threaded embedded Linux telemetry. Passionate about high-throughput data processing and algorithmic efficiency.
-      </p>
+    <div class="hero-bottom-details hero-overview-layout">
+      <!-- Left Column: Biography, Credentials & CTAs -->
+      <div class="hero-description-pane">
+        <div class="hero-tag-badge">
+          <span class="comic-pulse-dot" aria-hidden="true"></span>
+          <span class="hero-tag">ISSUE NO. 01 // PORTFOLIO DOSSIER</span>
+        </div>
+        <p class="hero-role-line">Backend Software Engineer &amp; Machine Learning Systems Builder</p>
+        <p class="hero-institution-line">National University of Computer and Emerging Sciences (FAST-NUCES) &middot; Class of 2027</p>
+        <p class="hero-bio-text">
+          Forging resilient backend architectures with Django &amp; Docker, quantitative financial risk models, and multi-threaded embedded Linux telemetry. Passionate about high-throughput data processing and algorithmic efficiency.
+        </p>
 
-      <div class="hero-cta-group">
-        <a href="projects.html" class="btn-comic btn-comic--primary">
-          <span>EXPLORE WORKS</span>
-          <span aria-hidden="true">→</span>
-        </a>
-        <a href="contact.html" class="btn-comic btn-comic--green">
-          <span>TRANSMIT DISPATCH</span>
-          <span aria-hidden="true">✉</span>
-        </a>
-        <a href="Data to keep/M.Hassaan Bin Saqib (resume).pdf" target="_blank" rel="noopener" class="btn-comic btn-comic--mono">
-          <span>RESUME / CV</span>
-          <span aria-hidden="true">📜</span>
-        </a>
-        <a href="https://linkedin.com/in/muhammad-hassaan-bin-saqib-/" target="_blank" rel="noopener" class="btn-comic btn-comic--mono">
-          <span>LINKEDIN</span>
-          <span aria-hidden="true">↗</span>
-        </a>
-        <a href="https://github.com/Hassaan-16" target="_blank" rel="noopener" class="btn-comic btn-comic--mono">
-          <span>GITHUB</span>
-          <span aria-hidden="true">↗</span>
-        </a>
+        <div class="hero-cta-group">
+          <a href="projects.html" class="btn-comic btn-comic--primary">
+            <span>EXPLORE WORKS</span>
+            <span aria-hidden="true">→</span>
+          </a>
+          <a href="contact.html" class="btn-comic btn-comic--green">
+            <span>TRANSMIT DISPATCH</span>
+            <span aria-hidden="true">✉</span>
+          </a>
+          <a href="Data to keep/M.Hassaan Bin Saqib (resume).pdf" target="_blank" rel="noopener" class="btn-comic btn-comic--mono">
+            <span>RESUME / CV</span>
+            <span aria-hidden="true">📜</span>
+          </a>
+          <a href="https://linkedin.com/in/muhammad-hassaan-bin-saqib-/" target="_blank" rel="noopener" class="btn-comic btn-comic--mono">
+            <span>LINKEDIN</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+          <a href="https://github.com/Hassaan-16" target="_blank" rel="noopener" class="btn-comic btn-comic--mono">
+            <span>GITHUB</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: Visual Highlights Single Showcase -->
+      <div class="hero-highlights-pane" id="overviewHighlights">
+        <div class="highlights-polaroid-frame highlights-polaroid-frame--single">
+          <div class="highlights-duct-tape" aria-hidden="true"></div>
+          
+          <div class="highlights-header-bar">
+            <div class="highlights-tag-chip">
+              <span class="comic-pulse-dot" aria-hidden="true"></span>
+              <span>HIGHLIGHT PHOTO // DOSSIER</span>
+            </div>
+          </div>
+
+          <!-- Single Photo Preview Window -->
+          <div class="highlights-photo-window" id="hlPhotoWindow" role="button" tabindex="0" aria-label="Click to enlarge highlight photo">
+            <img 
+              id="hlFeaturedImg" 
+              src="assets/highlights/20260213_122049.jpg" 
+              alt="M. Hassaan Bin Saqib - Highlight Photo" 
+              class="highlights-featured-img"
+            />
+            <div class="highlights-zoom-hint" aria-hidden="true">
+              <span>⤢ VIEW FULL FRAME</span>
+            </div>
+          </div>
+
+          <!-- Photo Meta -->
+          <div class="highlights-card-footer">
+            <div class="highlights-info">
+              <span class="highlights-title" id="hlTitle">M. Hassaan Bin Saqib</span>
+              <span class="highlights-specs" id="hlSpecs">Field Archive · Optics 35mm</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -184,6 +225,20 @@
     </div>
   </div>
 
+  <!-- Fullscreen Lightbox Modal for Highlights -->
+  <div class="gallery-lightbox-modal" id="overviewLightbox" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="lightbox-content-box">
+      <button class="lightbox-close-btn" id="overviewLightboxClose" type="button" aria-label="Close photo preview">✕</button>
+      <div class="lightbox-img-frame">
+        <img id="overviewLightboxImg" src="assets/banana_hero.jpg" alt="Showcase frame preview" />
+      </div>
+      <div class="lightbox-meta-bar">
+        <span class="lightbox-title" id="overviewLightboxTitle">Highlight Title</span>
+        <span class="lightbox-specs" id="overviewLightboxSpecs">Field Archive · 35mm Optics</span>
+      </div>
+    </div>
+  </div>
+
   <script type="importmap">
   {
     "imports": {
@@ -195,7 +250,9 @@
   }
   </script>
   <script src="js/data.js"></script>
+  <script type="module" src="js/media-manifest.js"></script>
   <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/highlights-showcase.js"></script>
   <script type="module" src="js/ipod-player.js?v=4"></script>
   <script type="module" src="js/audio-dock.js"></script>
   <script type="module" src="js/circular-gallery.js"></script>

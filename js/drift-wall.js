@@ -2,6 +2,8 @@
  * React Bits DriftWall port for vanilla JavaScript
  * Source: https://www.reactbits.dev/components/drift-wall
  */
+import { GALLERY_PHOTOS } from './media-manifest.js';
+
 (function () {
   'use strict';
 
@@ -217,32 +219,25 @@
             tileEl.setAttribute('aria-label', `${item.title} — ${item.location}`);
 
             // Preload test: default to placeholder, swap if loaded
+            // Native lazy-loaded gallery photo with fallback
             tileEl.innerHTML = `
               <span class="drift-wall__inner">
                 <img 
-                  src="${item.placeholder}" 
+                  src="${item.image}" 
                   alt="${item.title}" 
                   loading="lazy" 
                   decoding="async" 
                   draggable="false" 
-                  onerror="this.onerror=null; this.src='assets/banana_hero.jpg';"
+                  onerror="this.onerror=null; this.src='${item.placeholder || 'assets/banana_hero.jpg'}';"
                 />
                 <span class="drift-wall__overlay" aria-hidden="true"></span>
               </span>
             `;
 
-            // Background test image loader
-            const testImg = new Image();
-            testImg.onload = () => {
-              const img = tileEl.querySelector('img');
-              if (img) img.src = item.image;
-            };
-            testImg.src = item.image;
-
             // Click listener for Lightbox preview
             tileEl.addEventListener('click', () => {
               if (window.openGalleryLightbox) {
-                window.openGalleryLightbox(item, tileEl.querySelector('img')?.src || item.placeholder);
+                window.openGalleryLightbox(item, item.image || item.placeholder);
               }
             });
 
@@ -359,6 +354,9 @@
   // Mount DriftWall on #driftWallContainer
   // Retrieve dynamic gallery photos from manifest or fallback to defaults
   function getActiveDriftItems() {
+    if (Array.isArray(GALLERY_PHOTOS) && GALLERY_PHOTOS.length > 0) {
+      return GALLERY_PHOTOS;
+    }
     if (typeof window !== 'undefined' && Array.isArray(window.__GALLERY_PHOTOS__) && window.__GALLERY_PHOTOS__.length > 0) {
       return window.__GALLERY_PHOTOS__;
     }
