@@ -8,19 +8,35 @@ import { AUDIO_PLAYLIST } from './media-manifest.js';
 (function () {
   'use strict';
 
-  // Fallback playlist ensuring Golden Brown is always Track #1
+  // Fallback playlist matching exact track order
   const FALLBACK_PLAYLIST = [
     {
       title: 'Golden Brown',
-      artist: 'The Stranglers',
-      album: 'La Folie',
-      src: encodeURI('assets/audio/The Stranglers - Golden Brown.mp3')
+      artist: 'The Stranglers ft. Dakijko',
+      album: 'Golden Brown (Special Edition)',
+      filename: 'Golden Brown - Stranglers ft Dakijko (Female version).mp3',
+      src: 'assets/audio/Golden%20Brown%20-%20Stranglers%20ft%20Dakijko%20(Female%20version).mp3'
+    },
+    {
+      title: 'Aria Math',
+      artist: 'C418',
+      album: 'Minecraft: Volume Beta',
+      filename: 'Aria Math (Minecraft) - C418 (The Arabic Version_Rendition).mp3',
+      src: 'assets/audio/Aria%20Math%20(Minecraft)%20-%20C418%20(The%20Arabic%20Version_Rendition).mp3'
+    },
+    {
+      title: 'One Day',
+      artist: 'Hans Zimmer',
+      album: 'Pirates of the Caribbean',
+      filename: 'Will & Elizabeth - One Day (Hans Zimmer).mp3',
+      src: 'assets/audio/Will%20%26%20Elizabeth%20-%20One%20Day%20(Hans%20Zimmer).mp3'
     },
     {
       title: 'Attention',
       artist: 'Charlie Puth',
       album: 'Voicenotes',
-      src: encodeURI('assets/audio/Charlie Puth - Attention [Official Video].mp3')
+      filename: 'Charlie Puth - Attention [Official Video].mp3',
+      src: 'assets/audio/Charlie%20Puth%20-%20Attention%20%5BOfficial%20Video%5D.mp3'
     }
   ];
 

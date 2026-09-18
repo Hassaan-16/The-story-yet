@@ -77,25 +77,75 @@ function formatPhotoTitle(filename, categoryPrefix = 'Optics') {
 function syncAudio() {
   const files = fs.readdirSync(AUDIO_DIR).filter(f => AUDIO_EXTS.has(path.extname(f).toLowerCase()));
 
+  const KNOWN_TRACKS = {
+    'golden brown': {
+      title: 'Golden Brown',
+      artist: 'The Stranglers ft. Dakijko',
+      album: 'Golden Brown (Special Edition)'
+    },
+    'aria math': {
+      title: 'Aria Math',
+      artist: 'C418',
+      album: 'Minecraft: Volume Beta'
+    },
+    'one day': {
+      title: 'One Day',
+      artist: 'Hans Zimmer',
+      album: 'Pirates of the Caribbean'
+    },
+    'attention': {
+      title: 'Attention',
+      artist: 'Charlie Puth',
+      album: 'Voicenotes'
+    }
+  };
+
+  const PREFERRED_ORDER = [
+    'golden brown',
+    'aria math',
+    'one day',
+    'attention'
+  ];
+
   const tracks = files.map(file => {
-    const { artist, title } = parseAudioFilename(file);
+    const lower = file.toLowerCase();
+    const matchKey = Object.keys(KNOWN_TRACKS).find(k => lower.includes(k));
+
+    let title, artist, album;
+    if (matchKey) {
+      title = KNOWN_TRACKS[matchKey].title;
+      artist = KNOWN_TRACKS[matchKey].artist;
+      album = KNOWN_TRACKS[matchKey].album;
+    } else {
+      const parsed = parseAudioFilename(file);
+      title = parsed.title;
+      artist = parsed.artist;
+      album = 'Dossier Audio Archive';
+    }
+
     const encodedName = encodeURIComponent(file);
     return {
       title,
       artist,
-      album: 'Dossier Audio Archive',
+      album,
       filename: file,
       src: `assets/audio/${encodedName}`
     };
   });
 
-  // Sort tracks so that "Golden Brown" is always Track #1
+  // Sort strictly according to requested order:
+  // 1. Golden Brown, 2. Aria Math, 3. One Day, 4. Attention
   tracks.sort((a, b) => {
-    const aIsGolden = (a.title + ' ' + a.filename).toLowerCase().includes('golden brown');
-    const bIsGolden = (b.title + ' ' + b.filename).toLowerCase().includes('golden brown');
+    const aLower = (a.title + ' ' + a.filename).toLowerCase();
+    const bLower = (b.title + ' ' + b.filename).toLowerCase();
 
-    if (aIsGolden && !bIsGolden) return -1;
-    if (!aIsGolden && bIsGolden) return 1;
+    let aIdx = PREFERRED_ORDER.findIndex(k => aLower.includes(k));
+    let bIdx = PREFERRED_ORDER.findIndex(k => bLower.includes(k));
+
+    if (aIdx === -1) aIdx = 999;
+    if (bIdx === -1) bIdx = 999;
+
+    if (aIdx !== bIdx) return aIdx - bIdx;
     return a.title.localeCompare(b.title);
   });
 
