@@ -743,14 +743,26 @@ body {
   background-size: 8px 8px;
 }
 
-main {
+main:not(#spaMain) {
   max-width: var(--max-w);
   margin: 0 auto;
   padding: 5rem clamp(1.2rem, 4vw, 3.5rem) 7rem;
 }
 
+#spaMain {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
 .comic-page-main {
+  max-width: var(--max-w);
+  margin: 0 auto;
   padding-top: calc(var(--header-h) + 2.8rem);
+  padding-left: clamp(1.2rem, 4vw, 3.5rem);
+  padding-right: clamp(1.2rem, 4vw, 3.5rem);
   padding-bottom: 5rem;
   min-height: calc(100vh - var(--header-h));
   display: flex;
@@ -1416,9 +1428,11 @@ main {
 }
 
 .comic-contact-box {
-  background-color: var(--bg-white);
-  background-image: radial-gradient(rgba(255, 229, 0, 0.35) 2px, transparent 2px);
-  background-size: 10px 10px;
+  background-color: var(--bg-cream);
+  background-image: url('../assets/paper_texture.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border: var(--comic-border);
   box-shadow: var(--comic-shadow-lg);
   border-radius: 4px;
@@ -2966,6 +2980,31 @@ body.gallery-page .footer-legal {
   }
 }
 
+/* ==========================================================================
+   SPA View Panels & Seamless Transition
+   ========================================================================== */
 
+.spa-view {
+  display: none;
+  opacity: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
 
+.spa-view.is-active {
+  display: block;
+  opacity: 1;
+  animation: comicViewFadeIn 0.22s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
 
+@keyframes comicViewFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

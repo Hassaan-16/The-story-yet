@@ -1,5 +1,6 @@
 import { initScrollDamping } from './scroll-damping.js';
 import { getTechIcon } from './icons.js';
+import { initSpaRouter } from './spa-router.js';
 
 (function () {
   'use strict';
@@ -246,6 +247,7 @@ import { getTechIcon } from './icons.js';
     renderSkills();
 
     initNavigation();
+    initSpaRouter();
 
     initScrollDamping();
   });

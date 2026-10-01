@@ -30,14 +30,14 @@
     </a>
 
     <ul class="comic-nav-links" id="navLinks">
-      <li><a href="index.html" class="comic-nav-link is-active" aria-current="page">OVERVIEW</a></li>
-      <li><a href="projects.html" class="comic-nav-link">SELECTED WORKS</a></li>
-      <li><a href="experience.html" class="comic-nav-link">TRACK RECORD</a></li>
-      <li><a href="credentials.html" class="comic-nav-link">CREDENTIALS</a></li>
-      <li><a href="skills.html" class="comic-nav-link">ARSENAL</a></li>
+      <li><a href="#overview" class="comic-nav-link is-active" aria-current="page" data-route="overview">OVERVIEW</a></li>
+      <li><a href="#projects" class="comic-nav-link" data-route="projects">SELECTED WORKS</a></li>
+      <li><a href="#experience" class="comic-nav-link" data-route="experience">TRACK RECORD</a></li>
+      <li><a href="#credentials" class="comic-nav-link" data-route="credentials">CREDENTIALS</a></li>
+      <li><a href="#skills" class="comic-nav-link" data-route="skills">ARSENAL</a></li>
       <li><a href="gallery.html" class="comic-nav-link">GALLERY</a></li>
       <li>
-        <a href="contact.html" class="comic-nav-action">
+        <a href="#contact" class="comic-nav-action" data-route="contact">
           <span>CONTACT</span>
           <span aria-hidden="true">↗</span>
         </a>
@@ -49,54 +49,57 @@
     </button>
   </header>
 
-  <section class="hero-banana-banner" id="hero">
-    <div class="hero-banana-bg-stage">
-      <img 
-        src="assets/banana_hero.jpg" 
-        alt="A ripe yellow banana taped diagonally with silver duct tape to a seamless white textured paper wall" 
-        class="hero-banana-bg-img"
-      />
-      <div class="hero-name-overlay">
-        <h1 class="hero-full-name">Muhammad Hassaan Bin Saqib</h1>
-      </div>
-    </div>
-
-    <div class="hero-bottom-details hero-overview-layout">
-      <!-- Left Column: Biography, Credentials & CTAs -->
-      <div class="hero-description-pane">
-        <div class="hero-tag-badge">
-          <span class="comic-pulse-dot" aria-hidden="true"></span>
-          <span class="hero-tag">ISSUE NO. 01 // PORTFOLIO DOSSIER</span>
+  <main id="spaMain">
+    <!-- 1. OVERVIEW VIEW -->
+    <div class="spa-view is-active" id="view-overview" data-route="overview">
+      <section class="hero-banana-banner" id="hero">
+        <div class="hero-banana-bg-stage">
+          <img 
+            src="assets/banana_hero.jpg" 
+            alt="A ripe yellow banana taped diagonally with silver duct tape to a seamless white textured paper wall" 
+            class="hero-banana-bg-img"
+          />
+          <div class="hero-name-overlay">
+            <h1 class="hero-full-name">Muhammad Hassaan Bin Saqib</h1>
+          </div>
         </div>
-        <p class="hero-role-line">Backend Software Engineer &amp; Machine Learning Systems Builder</p>
-        <p class="hero-institution-line">National University of Computer and Emerging Sciences (FAST-NUCES) &middot; Class of 2027</p>
-        <p class="hero-bio-text">
-          Forging resilient backend architectures with Django &amp; Docker, quantitative financial risk models, and multi-threaded embedded Linux telemetry. Passionate about high-throughput data processing and algorithmic efficiency.
-        </p>
 
-        <div class="hero-cta-group">
-          <a href="projects.html" class="btn-comic btn-comic--primary">
-            <span>EXPLORE WORKS</span>
-            <span aria-hidden="true">→</span>
-          </a>
-          <a href="contact.html" class="btn-comic btn-comic--green">
-            <span>TRANSMIT DISPATCH</span>
-            <span aria-hidden="true">✉</span>
-          </a>
-          <a href="Data to keep/M.Hassaan Bin Saqib (resume).pdf" target="_blank" rel="noopener" class="btn-comic btn-comic--mono">
-            <span>RESUME / CV</span>
-            <span aria-hidden="true">📜</span>
-          </a>
-          <a href="https://linkedin.com/in/muhammad-hassaan-bin-saqib-/" target="_blank" rel="noopener" class="btn-comic btn-comic--mono">
-            <span>LINKEDIN</span>
-            <span aria-hidden="true">↗</span>
-          </a>
-          <a href="https://github.com/Hassaan-16" target="_blank" rel="noopener" class="btn-comic btn-comic--mono">
-            <span>GITHUB</span>
-            <span aria-hidden="true">↗</span>
-          </a>
-        </div>
-      </div>
+        <div class="hero-bottom-details hero-overview-layout">
+          <!-- Left Column: Biography, Credentials & CTAs -->
+          <div class="hero-description-pane">
+            <div class="hero-tag-badge">
+              <span class="comic-pulse-dot" aria-hidden="true"></span>
+              <span class="hero-tag">ISSUE NO. 01 // PORTFOLIO DOSSIER</span>
+            </div>
+            <p class="hero-role-line">Backend Software Engineer &amp; Machine Learning Systems Builder</p>
+            <p class="hero-institution-line">National University of Computer and Emerging Sciences (FAST-NUCES) &middot; Class of 2027</p>
+            <p class="hero-bio-text">
+              Forging resilient backend architectures with Django &amp; Docker, quantitative financial risk models, and multi-threaded embedded Linux telemetry. Passionate about high-throughput data processing and algorithmic efficiency.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#projects" class="btn-comic btn-comic--primary" data-route="projects">
+                <span>EXPLORE WORKS</span>
+                <span aria-hidden="true">→</span>
+              </a>
+              <a href="#contact" class="btn-comic btn-comic--green" data-route="contact">
+                <span>TRANSMIT DISPATCH</span>
+                <span aria-hidden="true">✉</span>
+              </a>
+              <a href="Data to keep/M.Hassaan Bin Saqib (resume).pdf" target="_blank" rel="noopener" class="btn-comic btn-comic--mono">
+                <span>RESUME / CV</span>
+                <span aria-hidden="true">📜</span>
+              </a>
+              <a href="https://linkedin.com/in/muhammad-hassaan-bin-saqib-/" target="_blank" rel="noopener" class="btn-comic btn-comic--mono">
+                <span>LINKEDIN</span>
+                <span aria-hidden="true">↗</span>
+              </a>
+              <a href="https://github.com/Hassaan-16" target="_blank" rel="noopener" class="btn-comic btn-comic--mono">
+                <span>GITHUB</span>
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
 
       <!-- Right Column: Visual Highlights Single Showcase -->
       <div class="hero-highlights-pane" id="overviewHighlights">
@@ -192,6 +195,177 @@
       </div>
     </div>
   </section>
+</div>
+<!-- END OVERVIEW VIEW -->
+
+    <!-- 2. SELECTED WORKS VIEW -->
+    <div class="spa-view" id="view-projects" data-route="projects" hidden>
+      <div class="comic-page-main">
+        <section id="projects">
+          <div class="comic-chapter-head">
+            <div class="chapter-title-wrap">
+              <span class="comic-vol-tag">VOL. I // COMPUTATIONAL ARCHITECTURE</span>
+              <h1 class="comic-section-title">Selected Works &amp; Systems</h1>
+              <p class="comic-section-sub">
+                Predictive machine learning engines, quantitative risk algorithms, and real-time Linux embedded controllers.
+              </p>
+            </div>
+          </div>
+
+          <div class="comic-projects-grid" id="projectsContainer">
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- 3. TRACK RECORD VIEW -->
+    <div class="spa-view" id="view-experience" data-route="experience" hidden>
+      <div class="comic-page-main">
+        <section id="experience">
+          <div class="comic-chapter-head">
+            <div class="chapter-title-wrap">
+              <span class="comic-vol-tag">VOL. II // CAREER CHRONICLES</span>
+              <h1 class="comic-section-title">Experience &amp; Leadership</h1>
+              <p class="comic-section-sub">
+                Engineering scalable SaaS platforms, public-sector anti-corruption proposals, and directing corporate relations.
+              </p>
+            </div>
+          </div>
+
+          <div class="comic-experience-strip" id="experienceContainer">
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- 4. CREDENTIALS VIEW -->
+    <div class="spa-view" id="view-credentials" data-route="credentials" hidden>
+      <div class="comic-page-main">
+        <section id="credentials">
+          <div class="comic-chapter-head">
+            <div class="chapter-title-wrap">
+              <span class="comic-vol-tag">VOL. III // VERIFIED COMPETENCIES</span>
+              <h1 class="comic-section-title">Academies &amp; Credentials</h1>
+              <p class="comic-section-sub">
+                Formal undergraduate software engineering foundation paired with professional specializations.
+              </p>
+            </div>
+          </div>
+
+          <div class="comic-credentials-layout">
+            <div class="diploma-list" id="academiesContainer">
+            </div>
+
+            <div class="comic-education-stack">
+              <!-- FAST-NUCES -->
+              <div class="comic-education-box">
+                <div>
+                  <span class="edu-stamp">FAST-NUCES LAHORE</span>
+                  <h2 class="edu-degree-title">Bachelors in Software Engineering (B.S.S.E)</h2>
+                  <span class="edu-institution-title">National University of Computer and Emerging Sciences</span>
+                  <p class="edu-discourse">
+                    Pursuing rigorous scholarship in algorithms, distributed systems, operating system kernels, relational calculus, and machine learning foundations.
+                  </p>
+                </div>
+
+                <div class="edu-conferral-badge">
+                  <span>STATUS: ACTIVE SCHOLAR</span>
+                  <span style="color: var(--british-racing-green);">AUG 2023 &ndash; AUG 2027</span>
+                </div>
+              </div>
+
+              <!-- International School Lahore -->
+              <div class="comic-education-box">
+                <div>
+                  <span class="edu-stamp">ISL LAHORE</span>
+                  <h2 class="edu-degree-title">GCE Advanced Level</h2>
+                  <span class="edu-institution-title">International School Lahore &middot; Computer Science, Physics and Mathematics</span>
+                  <p class="edu-discourse">
+                    Cambridge International A-Levels specializing in Computer Science, Physics, and Advanced Mathematics.
+                  </p>
+                </div>
+
+                <div class="edu-conferral-badge">
+                  <span>STATUS: COMPLETED</span>
+                  <span style="color: var(--british-racing-green);">AUG 2021 &ndash; MAY 2023</span>
+                </div>
+              </div>
+
+              <!-- Bahria Town School & College Lahore -->
+              <div class="comic-education-box">
+                <div>
+                  <span class="edu-stamp">BTSC LAHORE</span>
+                  <h2 class="edu-degree-title">GCE Ordinary Level</h2>
+                  <span class="edu-institution-title">Bahria Town School &amp; College Lahore &middot; Computer Sciences</span>
+                  <p class="edu-discourse">
+                    Cambridge International O-Levels with foundational concentration in Computer Sciences and core scientific principles.
+                  </p>
+                </div>
+
+                <div class="edu-conferral-badge">
+                  <span>STATUS: COMPLETED</span>
+                  <span style="color: var(--british-racing-green);">AUG 2007 &ndash; JULY 2021</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- 5. TECHNICAL ARSENAL VIEW -->
+    <div class="spa-view" id="view-skills" data-route="skills" hidden>
+      <div class="comic-page-main">
+        <section id="skills">
+          <div class="comic-chapter-head">
+            <div class="chapter-title-wrap">
+              <span class="comic-vol-tag">VOL. IV // TOOLING &amp; INFRASTRUCTURE</span>
+              <h1 class="comic-section-title">Technical Arsenal</h1>
+              <p class="comic-section-sub">
+                Full-spectrum proficiency across languages, backend frameworks, data analytics, and cloud orchestration.
+              </p>
+            </div>
+          </div>
+
+          <div class="comic-skills-stack" id="skillsContainer">
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- 6. CONTACT VIEW -->
+    <div class="spa-view" id="view-contact" data-route="contact" hidden>
+      <div class="comic-page-main comic-page-main--center">
+        <section class="comic-contact-section" id="contact">
+          <div class="comic-contact-box">
+            <span class="contact-bubble-tag">TRANSMISSION DESK</span>
+            <h1 class="contact-headline">Let's Build Something Impactful</h1>
+            <p class="contact-narrative">
+              Open to backend engineering internships, machine learning research appointments, and high-throughput distributed software challenges. Drop a line directly.
+            </p>
+
+            <div class="contact-actions-row">
+              <a href="mailto:hassaanbinsaqib03@gmail.com" class="btn-comic btn-comic--primary">
+                <span>EMAIL DIRECTLY</span>
+                <span aria-hidden="true">✉</span>
+              </a>
+              <a href="tel:+923174949123" class="btn-comic btn-comic--green">
+                <span>CALL: +92 317 4949123</span>
+              </a>
+              <a href="https://linkedin.com/in/muhammad-hassaan-bin-saqib-/" target="_blank" rel="noopener" class="btn-comic btn-comic--mono">
+                <span>LINKEDIN</span>
+                <span aria-hidden="true">↗</span>
+              </a>
+              <a href="https://github.com/Hassaan-16" target="_blank" rel="noopener" class="btn-comic btn-comic--mono">
+                <span>GITHUB</span>
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
 
   <div class="comic-halftone-band" aria-hidden="true"></div>
 
