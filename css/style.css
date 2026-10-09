@@ -1326,7 +1326,11 @@ main:not(#spaMain) {
 }
 
 .comic-education-box {
-  background: var(--bg-cream);
+  background-color: var(--bg-cream);
+  background-image: url('../assets/paper_texture.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border: var(--comic-border);
   box-shadow: var(--comic-shadow);
   border-radius: 4px;
@@ -1335,6 +1339,7 @@ main:not(#spaMain) {
   flex-direction: column;
   justify-content: space-between;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
 }
 
 .comic-education-box:hover {
@@ -1353,6 +1358,8 @@ main:not(#spaMain) {
   font-weight: 700;
   box-shadow: 2.5px 2.5px 0px var(--ink-black);
   margin-bottom: 0.85rem;
+  line-height: 1.35;
+  word-break: break-word;
 }
 
 .edu-degree-title {
@@ -1525,6 +1532,335 @@ main:not(#spaMain) {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   PRICING & SERVICES SECTION (CONTACT PAGE)
+   ───────────────────────────────────────────────────────────── */
+.comic-pricing-section {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto 3.5rem;
+}
+
+.pricing-base-banner {
+  background-color: var(--bg-white);
+  border: var(--comic-border);
+  box-shadow: var(--comic-shadow);
+  border-radius: 4px;
+  padding: 1.8rem clamp(1.4rem, 3vw, 2.4rem);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 2.2rem;
+  background-image: radial-gradient(rgba(10, 10, 10, 0.06) 1.5px, transparent 1.5px);
+  background-size: 10px 10px;
+}
+
+.pricing-base-info {
+  flex: 1;
+  min-width: 270px;
+}
+
+.pricing-rate-tag {
+  display: inline-block;
+  background: var(--pop-yellow);
+  color: var(--ink-black);
+  border: 1.5px solid var(--ink-black);
+  padding: 0.2rem 0.65rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  box-shadow: 2px 2px 0px var(--ink-black);
+  margin-bottom: 0.6rem;
+}
+
+.pricing-base-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+  font-weight: 700;
+  color: var(--ink-black);
+  margin-bottom: 0.4rem;
+  line-height: 1.2;
+}
+
+.pricing-base-desc {
+  font-family: var(--font-body);
+  font-size: 0.96rem;
+  color: var(--grey-dark);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.pricing-rate-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.4rem;
+  flex-shrink: 0;
+}
+
+.pricing-rate-sub {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--olive-green);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.pricing-base-rate-badge {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  background: var(--british-racing-green);
+  color: var(--bg-white);
+  border: 2.5px solid var(--ink-black);
+  box-shadow: 4px 4px 0px var(--ink-black);
+  padding: 0.5rem 1.2rem;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 1.6rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.pricing-base-rate-badge small {
+  font-size: 0.85rem;
+  opacity: 0.9;
+  font-weight: 600;
+}
+
+.pricing-packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.pricing-package-card {
+  background: var(--bg-white);
+  border: var(--comic-border);
+  box-shadow: var(--comic-shadow);
+  border-radius: 4px;
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pricing-package-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px var(--ink-black);
+}
+
+.pricing-package-card--highlight {
+  background-color: var(--bg-cream);
+  background-image: radial-gradient(rgba(75, 88, 37, 0.08) 1.5px, transparent 1.5px);
+  background-size: 10px 10px;
+}
+
+.package-top-bar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.package-category-pill {
+  background: var(--pop-yellow);
+  border: 1.5px solid var(--ink-black);
+  padding: 0.2rem 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  box-shadow: 2px 2px 0px var(--ink-black);
+}
+
+.package-price-tag {
+  background: var(--british-racing-green);
+  color: var(--bg-white);
+  border: 1.5px solid var(--ink-black);
+  padding: 0.25rem 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  font-weight: 800;
+  box-shadow: 2px 2px 0px var(--ink-black);
+  white-space: nowrap;
+}
+
+.package-title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--ink-black);
+  margin-bottom: 0.6rem;
+}
+
+.package-summary {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  color: var(--grey-dark);
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+.pricing-formula-box {
+  background: #f7f3e8;
+  border: 1.5px solid var(--ink-black);
+  box-shadow: 2px 2px 0px var(--ink-black);
+  padding: 0.9rem 1rem;
+  margin-bottom: 1.2rem;
+  border-radius: 3px;
+}
+
+.formula-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--ink-black);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.6rem;
+}
+
+.package-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.package-features-list li {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: var(--ink-black);
+  display: flex;
+  align-items: baseline;
+  gap: 0.55rem;
+}
+
+.feature-check {
+  color: var(--british-racing-green);
+  font-weight: 900;
+  font-family: var(--font-mono);
+  flex-shrink: 0;
+}
+
+.package-disclaimer {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--olive-green);
+  background: var(--bg-white);
+  border: 1px dashed var(--ink-black);
+  padding: 0.55rem 0.8rem;
+  margin-bottom: 1.2rem;
+  border-radius: 2px;
+  line-height: 1.45;
+}
+
+.package-cta-btn {
+  width: 100%;
+  justify-content: center;
+}
+
+/* Specialized Services Deck on Contact Page */
+.contact-services-deck {
+  background: var(--bg-white);
+  border: var(--comic-border);
+  box-shadow: var(--comic-shadow);
+  border-radius: 4px;
+  padding: clamp(1.5rem, 3vw, 2.4rem);
+  margin-bottom: 2.5rem;
+  background-image: radial-gradient(rgba(10, 10, 10, 0.05) 1.5px, transparent 1.5px);
+  background-size: 11px 11px;
+}
+
+.services-deck-head {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px dashed var(--ink-black);
+}
+
+.services-deck-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--ink-black);
+  margin: 0;
+}
+
+.services-deck-sub {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: var(--olive-green);
+  margin: 0.2rem 0 0;
+}
+
+.services-chips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.service-card-chip {
+  background: var(--bg-cream);
+  border: 1.5px solid var(--ink-black);
+  box-shadow: 2.5px 2.5px 0px var(--ink-black);
+  padding: 0.85rem 1rem;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.service-card-chip:hover {
+  transform: translate(-1.5px, -1.5px);
+  box-shadow: 4px 4px 0px var(--ink-black);
+}
+
+.service-card-chip .tech-icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  color: var(--british-racing-green);
+}
+
+.service-chip-content {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.service-chip-name {
+  font-family: var(--font-display);
+  font-size: 0.94rem;
+  font-weight: 700;
+  color: var(--ink-black);
+  line-height: 1.25;
+}
+
+.service-chip-desc {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--grey-dark);
+  margin-top: 0.2rem;
+  line-height: 1.35;
 }
 
 .comic-contact-section {

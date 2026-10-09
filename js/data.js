@@ -34,7 +34,7 @@ const MHS_ARCHIVES = {
       date: "August 2021 - May 2023",
       status: "COMPLETED",
       location: "Lahore",
-      stamp: "ISL LAHORE",
+      stamp: "International School Lahore - DHA 5, Ring Road Campus",
       details: "Cambridge International A-Levels specializing in Computer Science, Physics, and Advanced Mathematics.",
       award: "100% Merit Scholarship - A levels",
       awardIssuer: "Issued by International School Lahore · Oct 2021",
@@ -250,6 +250,20 @@ const MHS_ARCHIVES = {
   ],
 
   academies: [
+    {
+      institution: "PwC US",
+      credential: "Cyber Security Consulting Job Simulation",
+      date: "September 8, MMXXVI · 2026",
+      domain: "Completed a comprehensive job simulation focusing on a cybersecurity risk assessment for PwC, determining control gaps, documenting Test of Design and Operating Effectiveness, and presenting findings.",
+      badge: "JOB SIMULATION",
+      coursesCount: null,
+      bullets: [
+        "Completed a job simulation focused on a cybersecurity risk assessment for PwC",
+        "Determined if controls were missing from a process and identified risks associated with those gaps",
+        "Completed a Test of Design and Operating Effectiveness documentation",
+        "Created a one-slide summary to present findings"
+      ]
+    },
     {
       institution: "Postman Academy",
       credential: "API Fundamentals Expert Certification",

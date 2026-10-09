@@ -150,6 +150,17 @@ import { initSpaRouter } from './spa-router.js';
         `
         : '';
 
+      const bulletsHtml = ac.bullets && ac.bullets.length > 0
+        ? `
+          <div class="diploma-domains-block">
+            <span class="diploma-domains-label">Key Deliverables &amp; Simulation Scope:</span>
+            <ul class="diploma-domains-list">
+              ${ac.bullets.map(b => `<li><span class="domain-bullet">▸</span> <span>${b}</span></li>`).join('')}
+            </ul>
+          </div>
+        `
+        : '';
+
       return `
         <div class="comic-diploma-card">
           <div class="diploma-top-row">
@@ -165,6 +176,7 @@ import { initSpaRouter } from './spa-router.js';
 
           <p class="diploma-summary">${ac.domain}</p>
           ${domainsHtml}
+          ${bulletsHtml}
           <span class="diploma-date-tag">${ac.date}</span>
         </div>
       `;
@@ -185,7 +197,6 @@ import { initSpaRouter } from './spa-router.js';
       { key: 'security', title: 'Security & Threat Mitigation', icon: '🛡' },
       { key: 'networking', title: 'Networking & Systems', icon: '🌐' },
       { key: 'tools_agile', title: 'Tools & Agile Methodologies', icon: '📋' },
-      { key: 'services', title: 'Services & Architectural Specializations', icon: '💼' },
       { key: 'soft_skills', title: 'Leadership & Soft Skills', icon: '🤝' }
     ];
 
@@ -216,6 +227,21 @@ import { initSpaRouter } from './spa-router.js';
         </div>
       `;
     }).filter(Boolean).join('');
+  }
+
+  function renderContactServices() {
+    const container = document.getElementById('contactServicesContainer');
+    if (!container || !ARCHIVES || !ARCHIVES.compendium || !ARCHIVES.compendium.services) return;
+
+    container.innerHTML = ARCHIVES.compendium.services.map((item) => `
+      <div class="service-card-chip">
+        ${getTechIcon(item.name)}
+        <div class="service-chip-content">
+          <span class="service-chip-name">${item.name}</span>
+          <span class="service-chip-desc">${item.proficiency}</span>
+        </div>
+      </div>
+    `).join('');
   }
 
   function initNavigation() {
@@ -263,6 +289,7 @@ import { initSpaRouter } from './spa-router.js';
     renderExperience();
     renderAcademies();
     renderSkills();
+    renderContactServices();
 
     initNavigation();
     initSpaRouter();
