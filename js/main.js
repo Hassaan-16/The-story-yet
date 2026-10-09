@@ -135,17 +135,36 @@ import { initSpaRouter } from './spa-router.js';
     if (!container || !ARCHIVES || !ARCHIVES.academies) return;
 
     container.innerHTML = ARCHIVES.academies.map((ac) => {
+      const courseBadgeHtml = ac.coursesCount
+        ? `<span class="diploma-course-count-badge">★ ${ac.coursesCount}</span>`
+        : '';
+
+      const domainsHtml = ac.domains && ac.domains.length > 0
+        ? `
+          <div class="diploma-domains-block">
+            <span class="diploma-domains-label">5 Core Exam Domains:</span>
+            <ul class="diploma-domains-list">
+              ${ac.domains.map(d => `<li><span class="domain-bullet">▸</span> <span>${d}</span></li>`).join('')}
+            </ul>
+          </div>
+        `
+        : '';
+
       return `
         <div class="comic-diploma-card">
           <div class="diploma-top-row">
             <div>
-              <h4 class="diploma-name">${ac.credential}</h4>
+              <div class="diploma-title-row">
+                <h4 class="diploma-name">${ac.credential}</h4>
+                ${courseBadgeHtml}
+              </div>
               <span class="diploma-source">${ac.institution}</span>
             </div>
             <span class="diploma-pill">${ac.badge}</span>
           </div>
 
           <p class="diploma-summary">${ac.domain}</p>
+          ${domainsHtml}
           <span class="diploma-date-tag">${ac.date}</span>
         </div>
       `;
@@ -157,25 +176,24 @@ import { initSpaRouter } from './spa-router.js';
     if (!container || !ARCHIVES || !ARCHIVES.compendium) return;
 
     const sections = [
-      {
-        key: 'languages',
-        title: 'Core Programming Languages & Systems',
-        icon: '⚡'
-      },
-      {
-        key: 'frameworks',
-        title: 'Frameworks, Machine Learning & Analytics',
-        icon: '✦'
-      },
-      {
-        key: 'infrastructure',
-        title: 'Infrastructure, DevOps & Cloud Systems',
-        icon: '⚙'
-      }
+      { key: 'languages', title: 'Programming Languages', icon: '⚡' },
+      { key: 'frameworks', title: 'Frameworks & Libraries', icon: '✦' },
+      { key: 'databases', title: 'Databases & Storage', icon: '🗄' },
+      { key: 'infrastructure', title: 'DevOps & Infrastructure', icon: '⚙' },
+      { key: 'cloud_ai', title: 'Cloud & AI Platforms', icon: '☁' },
+      { key: 'observability', title: 'Observability & Monitoring', icon: '📊' },
+      { key: 'security', title: 'Security & Threat Mitigation', icon: '🛡' },
+      { key: 'networking', title: 'Networking & Systems', icon: '🌐' },
+      { key: 'tools_agile', title: 'Tools & Agile Methodologies', icon: '📋' },
+      { key: 'services', title: 'Services & Architectural Specializations', icon: '💼' },
+      { key: 'soft_skills', title: 'Leadership & Soft Skills', icon: '🤝' }
     ];
 
     container.innerHTML = sections.map((sec) => {
-      const chips = ARCHIVES.compendium[sec.key].map((item) => `
+      const items = ARCHIVES.compendium[sec.key];
+      if (!items || items.length === 0) return '';
+
+      const chips = items.map((item) => `
         <div class="comic-skill-chip">
           ${getTechIcon(item.name)}
           <div class="skill-meta-wrap">
@@ -197,7 +215,7 @@ import { initSpaRouter } from './spa-router.js';
           </div>
         </div>
       `;
-    }).join('');
+    }).filter(Boolean).join('');
   }
 
   function initNavigation() {

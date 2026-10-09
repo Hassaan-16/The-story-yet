@@ -35,7 +35,10 @@ const MHS_ARCHIVES = {
       status: "COMPLETED",
       location: "Lahore",
       stamp: "ISL LAHORE",
-      details: "Cambridge International A-Levels focusing on Computer Science, Physics, and Advanced Mathematics."
+      details: "Cambridge International A-Levels specializing in Computer Science, Physics, and Advanced Mathematics.",
+      award: "100% Merit Scholarship - A levels",
+      awardIssuer: "Issued by International School Lahore · Oct 2021",
+      awardDesc: "Received 100% Merit Scholarship from the International School Lahore throughout A Levels for exceptional grades."
     },
     {
       institution: "Bahria Town School & College Lahore",
@@ -44,7 +47,10 @@ const MHS_ARCHIVES = {
       status: "COMPLETED",
       location: "Lahore",
       stamp: "BTSC LAHORE",
-      details: "Cambridge International O-Levels with early concentration in Computer Sciences and core STEM disciplines."
+      details: "Cambridge International O-Levels with foundational concentration in Computer Sciences and core STEM disciplines.",
+      award: "Academic Excellence Award",
+      awardIssuer: "Issued by Bahria Town School and College · Aug 2021",
+      awardDesc: "The Principal's Honours List for high achieving exceptional grades in O levels."
     }
   ],
 
@@ -111,15 +117,15 @@ const MHS_ARCHIVES = {
     },
     {
       numeral: "VI",
-      title: "ANON — Decentralized Campus Cryptographic Network",
-      subtitle: "Peer-to-Peer Anonymous Communication Platform with Token Bucket Rate-Limiting",
-      abstract: "A fault-tolerant, decentralized communications protocol engineered to facilitate spontaneous, secure discourse across university student bodies without centralized intermediary surveillance. Incorporates cryptographic anonymity primitives alongside a dynamic token-bucket rate-limiting algorithm, reducing network spam vectors by 35% without degrading genuine message throughput.",
+      title: "ANON — Anonymous Campus Rumor Mesh",
+      subtitle: "Self-Custodial Cryptographic Identity & Real-Time Consensus Verification Network",
+      abstract: "A privacy-preserving, peer-to-peer campus communication mesh engineered for verified students without intermediary tracking. Implements self-custodial identity with SHA-256 .edu verification, scrypt seed hashing, and an interactive Mana reward economy. Features real-time WebSockets communication, dynamic token-bucket rate limiting, and consensus-based rumor verification.",
       category: "DISTRIBUTED NETWORKS & APPLIED CRYPTOGRAPHY",
       year: "MMXXV · 2025",
       metric: "35% SPAM SUPPRESSION",
-      metricDetail: "Dynamic Cryptographic Limiting",
-      tech: ["Django", "Distributed Systems", "Cryptography", "Rate Limiting", "WebSockets", "Python"],
-      repo: "https://github.com/Hassaan-16"
+      metricDetail: "Self-Custodial Consensus Mesh",
+      tech: ["React 18", "Node.js", "Express", "WebSockets", "SQLite", "Tailwind CSS", "JWT", "Cryptography"],
+      repo: "https://github.com/shobiShinobi/ANON-"
     }
   ],
 
@@ -246,80 +252,160 @@ const MHS_ARCHIVES = {
   academies: [
     {
       institution: "Postman Academy",
-      credential: "Postman Student Expert Certification",
+      credential: "API Fundamentals Expert Certification",
       date: "January, MMXXVI · 2026",
-      domain: "API Architecture, Protocol Design & Automated Integration Testing",
-      badge: "STUDENT EXPERT"
+      domain: "API Architecture, Protocol Design & Automated Integration Testing with Collections, Monitors, and Mock Servers.",
+      badge: "API EXPERT",
+      coursesCount: null
     },
     {
       institution: "IBM Corporation",
       credential: "Data Science Professional Working Specialization",
       date: "June, MMXXV · 2025",
-      domain: "Exhaustive 10-course professional curriculum spanning data science methodology, machine learning modeling, and analytical narrative",
-      badge: "PROFESSIONAL SPECIALIZATION"
+      domain: "Exhaustive professional curriculum spanning data science methodology, Python programming, SQL, data analysis, data visualization, machine learning models, and applied data science capstone.",
+      badge: "10-COURSE SPECIALIZATION",
+      coursesCount: "10 Courses"
     },
     {
       institution: "Stanford Online",
       credential: "Machine Learning Specialization",
       date: "June, MMXXV · 2025",
-      domain: "Three-course advanced mathematical specialization covering Supervised Learning, Unsupervised Pattern Recognition, and Deep Neural Systems",
-      badge: "STANFORD SCHOLAR"
+      domain: "Advanced mathematical curriculum led by Andrew Ng covering Supervised Machine Learning (Regression & Classification), Advanced Learning Algorithms (Deep Neural Networks & Decision Trees), and Unsupervised Learning & Recommenders.",
+      badge: "3-COURSE SPECIALIZATION",
+      coursesCount: "3 Courses"
     },
     {
       institution: "DeepLearning.AI",
       credential: "Generative AI for Software Development",
       date: "January, MMXXV · 2025",
-      domain: "Three-course curriculum covering AI-powered software systems, architecture design, and LLM configuration management",
-      badge: "AI SPECIALIST"
+      domain: "Three-course specialized curriculum covering AI-powered software workflows, architectural paradigms, prompt engineering, and LLM configuration management.",
+      badge: "3-COURSE SPECIALIZATION",
+      coursesCount: "3 Courses"
     },
     {
       institution: "ISC2 International",
       credential: "Certified in Cybersecurity (CC)",
       date: "August, MMXXIV · 2024",
-      domain: "Security governance principles, business continuity / disaster recovery (BCP/DRP), access control matrices, and network defense operations",
-      badge: "CERTIFIED CYBERSECURITY"
+      domain: "The Certified in Cybersecurity (CC) credential from ISC2 proves foundational cybersecurity knowledge across security principles, business continuity, access controls, network defense, and security operations.",
+      badge: "CERTIFIED CYBERSECURITY",
+      coursesCount: null,
+      domains: [
+        "Domain 1: Security Principles",
+        "Domain 2: Business Continuity (BC), Disaster Recovery (DR) & Incident Response Concepts",
+        "Domain 3: Access Controls Concepts",
+        "Domain 4: Network Security",
+        "Domain 5: Security Operations"
+      ]
     }
   ],
 
   compendium: {
     languages: [
-      { name: "Python", proficiency: "Architectural Expert" },
-      { name: "C / C++", proficiency: "Systems Programming" },
-      { name: "Java", proficiency: "Object-Oriented Design" },
-      { name: "JavaScript", proficiency: "Asynchronous Front & Back" },
-      { name: "TypeScript", proficiency: "Type-Safe Architectures" },
+      { name: "Python", proficiency: "Architectural & Scientific" },
+      { name: "Java", proficiency: "Enterprise Systems & OOP" },
+      { name: "JavaScript / TypeScript", proficiency: "Async & Full-Stack" },
       { name: "SQL", proficiency: "Relational Queries & Optimization" },
+      { name: "C / C++", proficiency: "High-Performance Systems" },
+      { name: "HTML / CSS", proficiency: "Semantic Modern Web" },
       { name: "Assembly x86", proficiency: "Low-Level Machine Execution" },
-      { name: "HTML / CSS", proficiency: "Semantic Markup & Styling" },
       { name: "VB.net", proficiency: "Enterprise Desktop Solutions" }
     ],
     frameworks: [
-      { name: "Django (DRF)", proficiency: "RESTful API Framework" },
-      { name: "FastAPI", proficiency: "High-Concurrency Async APIs" },
-      { name: "Spring Boot", proficiency: "Enterprise Java Services" },
+      { name: "Django & DRF", proficiency: "RESTful SaaS Architectures" },
+      { name: "Spring Boot", proficiency: "Enterprise Microservices" },
       { name: "React", proficiency: "Reactive Component Trees" },
       { name: "Node.js", proficiency: "Event-Driven Backends" },
-      { name: "Angular", proficiency: "Single-Page Architectures" },
+      { name: "Angular", proficiency: "Single-Page Enterprise Apps" },
       { name: "TensorFlow", proficiency: "Deep Learning Tensor Graphs" },
-      { name: "Scikit-Learn", proficiency: "Statistical Machine Learning" },
-      { name: "Pandas", proficiency: "DataFrame Manipulation" },
+      { name: "Scikit-learn", proficiency: "Statistical Machine Learning" },
       { name: "NumPy", proficiency: "Vectorized Linear Algebra" },
-      { name: "Matplotlib & Seaborn", proficiency: "Statistical Visualizations" }
+      { name: "Pandas", proficiency: "DataFrame Manipulation" },
+      { name: "Matplotlib & Seaborn", proficiency: "Statistical Visualizations" },
+      { name: "JUnit", proficiency: "Automated Unit Testing" },
+      { name: "Selenium", proficiency: "Browser Automation & QA" },
+      { name: "BeautifulSoup", proficiency: "HTML Parsing & Web Scraping" },
+      { name: "WinForms", proficiency: "Windows Desktop Applications" },
+      { name: "Qt", proficiency: "Cross-Platform GUI Framework" },
+      { name: "CUPS", proficiency: "Linux Print Spooling Architecture" },
+      { name: "Kivy", proficiency: "Cross-Platform Python Apps" }
+    ],
+    databases: [
+      { name: "PostgreSQL", proficiency: "ACID Relational Architectures" },
+      { name: "MongoDB", proficiency: "Document Store NoSQL Schemas" },
+      { name: "SQLite", proficiency: "Embedded Local Databases" }
     ],
     infrastructure: [
       { name: "Docker", proficiency: "Containerized Workloads" },
       { name: "Kubernetes", proficiency: "Cluster Orchestration" },
-      { name: "Git / GitHub", proficiency: "Distributed Version Control" },
+      { name: "Git & GitHub", proficiency: "Distributed Version Control" },
       { name: "CI / CD Pipelines", proficiency: "Automated Build & Deployment" },
-      { name: "Celery", proficiency: "Distributed Asynchronous Queues" },
-      { name: "Postman", proficiency: "API Testing & Mocking" },
-      { name: "PostgreSQL", proficiency: "ACID Relational Databases" },
-      { name: "MongoDB", proficiency: "Document Store Schemas" },
-      { name: "SQLite", proficiency: "Embedded Local Databases" },
-      { name: "Wireshark", proficiency: "Packet Inspection & Protocol Forensics" },
-      { name: "Cisco Packet Tracer", proficiency: "Network Topology Simulation" },
-      { name: "Google Vertex AI", proficiency: "Cloud ML Deployment" },
-      { name: "N8N", proficiency: "Workflow Automation" }
+      { name: "Vercel", proficiency: "Edge Deployment Platform" },
+      { name: "Netlify", proficiency: "Static & Serverless Hosting" },
+      { name: "Postman", proficiency: "API Testing & Automated Suites" },
+      { name: "N8N", proficiency: "Workflow Node Automation" }
+    ],
+    cloud_ai: [
+      { name: "Google Vertex AI", proficiency: "Managed Cloud ML Pipelines" },
+      { name: "IBM Watson X", proficiency: "Enterprise AI & Foundation Models" },
+      { name: "Hugging Face", proficiency: "Model Hub & Transformers" },
+      { name: "Kaggle", proficiency: "Competitive Machine Learning" },
+      { name: "Google Colab", proficiency: "Cloud Accelerated Notebooks" },
+      { name: "Jupyter", proficiency: "Interactive Data Research" }
+    ],
+    observability: [
+      { name: "Sentry (Error Logging)", proficiency: "Real-Time Crash Telemetry" },
+      { name: "Structured Logging", proficiency: "Diagnostic Trace Auditing" },
+      { name: "Silk Query Analysis & Optimisation", proficiency: "SQL Query Profiling" },
+      { name: "Application Performance Monitoring", proficiency: "APM Telemetry & Metrics" }
+    ],
+    security: [
+      { name: "OWASP Top 10", proficiency: "Web Vulnerability Remediation" },
+      { name: "JWT Authentication", proficiency: "Cryptographic Token Handshakes" },
+      { name: "API Endpoint Security", proficiency: "Throttling, CORS & Validation" },
+      { name: "CSRF/XSS Mitigation", proficiency: "Defensive Web Architecture" },
+      { name: "Role-Based Access Control (RBAC)", proficiency: "Granular Permission Matrices" },
+      { name: "Secrets Management", proficiency: "Environment Isolation & Vaults" }
+    ],
+    networking: [
+      { name: "Cisco Packet Tracer", proficiency: "Network Topology & Routing Labs" },
+      { name: "Wireshark", proficiency: "Packet Inspection & Forensics" },
+      { name: "Debian", proficiency: "Hardened Linux Server Core" },
+      { name: "Arch", proficiency: "Rolling Release Workstation" },
+      { name: "Ubuntu", proficiency: "Production Linux Environments" },
+      { name: "Raspberry Pi", proficiency: "ARM Single-Board Embedded" }
+    ],
+    tools_agile: [
+      { name: "ClickUp", proficiency: "Agile Task & Sprint Management" },
+      { name: "Jira", proficiency: "Enterprise Issue Tracking" },
+      { name: "Trello", proficiency: "Kanban Board Workflows" },
+      { name: "Maze", proficiency: "User Experience Validation" },
+      { name: "UML", proficiency: "System Architectural Diagrams" },
+      { name: "Agile/Scrum", proficiency: "Iterative Sprint Ceremonies" },
+      { name: "Project Documentation", proficiency: "Engineering Architecture Docs" },
+      { name: "Technical Writing", proficiency: "RFCs, Whitepapers & Specs" },
+      { name: "Microsoft Office", proficiency: "Executive Reporting" },
+      { name: "Adobe Photoshop", proficiency: "Digital Graphic Assets" },
+      { name: "Canva", proficiency: "Visual Presentations" }
+    ],
+    services: [
+      { name: "Web Scraping", proficiency: "High-Throughput Scraping & ETL" },
+      { name: "Data Preprocessing", proficiency: "Sanitization & Feature Normalization" },
+      { name: "Model Training & Fine-tuning", proficiency: "Hyperparameter Optimization" },
+      { name: "Full-Stack Web Development", proficiency: "End-to-End Scalable Applications" },
+      { name: "Database Administration", proficiency: "Schema Design, Indices & Profiling" },
+      { name: "Network Administration", proficiency: "Protocols, Topologies & Packet Forensics" },
+      { name: "UI/UX Research & Development", proficiency: "User-Centric Prototyping" },
+      { name: "IT Audit", proficiency: "Security & Compliance Audits" },
+      { name: "Software Design & Architecture", proficiency: "SOLID Principles & Clean Code" }
+    ],
+    soft_skills: [
+      { name: "Communication & Presentation", proficiency: "Executive & Technical Briefings" },
+      { name: "Negotiation", proficiency: "Deal Structuring & Consensus" },
+      { name: "Debating", proficiency: "National Parliamentary Debates" },
+      { name: "Problem Solving", proficiency: "Analytical Root Cause Resolution" },
+      { name: "Stakeholder Management and Negotiation", proficiency: "Corporate Alignment" },
+      { name: "Cross-Team Collaboration", proficiency: "Multi-Functional Alignment" },
+      { name: "Risk Assessment", proficiency: "Quantitative Threat Scoring" }
     ]
   }
 };

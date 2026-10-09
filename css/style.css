@@ -1239,6 +1239,72 @@ main:not(#spaMain) {
   flex-shrink: 0;
 }
 
+.diploma-title-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.diploma-course-count-badge {
+  display: inline-block;
+  background: var(--british-racing-green);
+  color: var(--bg-white);
+  border: 1.5px solid var(--ink-black);
+  padding: 0.15rem 0.55rem;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  box-shadow: 2px 2px 0px var(--ink-black);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.diploma-domains-block {
+  margin: 0.75rem 0 0.85rem;
+  padding: 0.75rem 0.95rem;
+  background: #f7f3e8;
+  border: 1.5px solid var(--ink-black);
+  border-radius: 3px;
+  box-shadow: 2px 2px 0px var(--ink-black);
+}
+
+.diploma-domains-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--ink-black);
+  text-transform: uppercase;
+  margin-bottom: 0.45rem;
+  letter-spacing: 0.03em;
+}
+
+.diploma-domains-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.diploma-domains-list li {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--ink-black);
+  line-height: 1.45;
+  display: flex;
+  align-items: baseline;
+  gap: 0.45rem;
+}
+
+.domain-bullet {
+  color: var(--british-racing-green);
+  font-weight: 900;
+}
+
 .diploma-summary {
   font-family: var(--font-body);
   font-size: 0.92rem;
@@ -1313,6 +1379,45 @@ main:not(#spaMain) {
   line-height: 1.65;
   color: var(--grey-dark);
   margin-bottom: 1.25rem;
+}
+
+.edu-award-pill-box {
+  background: var(--bg-white);
+  border: 1.5px solid var(--ink-black);
+  box-shadow: 2.5px 2.5px 0px var(--ink-black);
+  padding: 0.85rem 1rem;
+  margin-bottom: 1.25rem;
+  border-radius: 3px;
+}
+
+.edu-award-badge {
+  display: inline-block;
+  background: var(--pop-yellow);
+  color: var(--ink-black);
+  border: 1.5px solid var(--ink-black);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 0.2rem 0.55rem;
+  margin-bottom: 0.35rem;
+  letter-spacing: 0.02em;
+}
+
+.edu-award-issuer {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--olive-green);
+  margin-bottom: 0.35rem;
+}
+
+.edu-award-desc {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--ink-black);
+  margin: 0;
 }
 
 .edu-conferral-badge {
@@ -3008,3 +3113,136 @@ body.gallery-page .footer-legal {
     transform: translateY(0);
   }
 }
+
+/* ==========================================================================
+   Sponsor Wall: Associated Partners (3 Rows x 4 Columns)
+   ========================================================================== */
+
+.sponsor-wall-section {
+  width: 100%;
+  margin: 0 auto;
+  padding: 5rem clamp(1.2rem, 4vw, 4rem) 6rem;
+  background-color: var(--bg-white);
+  border-bottom: var(--comic-border);
+  position: relative;
+}
+
+.sponsor-wall-grid {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1.2rem, 2.2vw, 1.8rem);
+}
+
+.sponsor-card {
+  background-color: var(--bg-white);
+  background-image: radial-gradient(rgba(10, 10, 10, 0.035) 1.5px, transparent 1.5px);
+  background-size: 11px 11px;
+  border: var(--comic-border);
+  box-shadow: 4px 4px 0px var(--ink-black);
+  border-radius: 4px;
+  padding: 1.5rem 1.2rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  position: relative;
+  transition: transform 0.22s var(--ease-snap), box-shadow 0.22s var(--ease-snap);
+}
+
+.sponsor-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 7px 7px 0px var(--ink-black);
+  background-color: #ffffff;
+}
+
+.sponsor-logo-frame {
+  width: 100%;
+  height: 94px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem;
+}
+
+.sponsor-logo {
+  max-width: 90%;
+  max-height: 70px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.22s ease;
+}
+
+.sponsor-card:hover .sponsor-logo {
+  transform: scale(1.06);
+}
+
+.sponsor-logo--lg {
+  max-width: 95%;
+  max-height: 84px;
+}
+
+.sponsor-logo--wide {
+  max-width: 98%;
+  max-height: 76px;
+}
+
+.sponsor-logo--emblem {
+  max-width: 82px;
+  max-height: 82px;
+  width: auto;
+  height: auto;
+}
+
+.sponsor-logo--badge {
+  border-radius: 6px;
+  max-width: 82px;
+  max-height: 82px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.sponsor-card-footer {
+  width: 100%;
+  border-top: 1.5px dashed rgba(10, 10, 10, 0.18);
+  padding-top: 0.65rem;
+  margin-top: 0.6rem;
+}
+
+.sponsor-name {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--ink-black);
+  text-transform: uppercase;
+}
+
+@media (max-width: 992px) {
+  .sponsor-wall-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 680px) {
+  .sponsor-wall-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.9rem;
+  }
+  .sponsor-logo-frame {
+    height: 72px;
+  }
+  .sponsor-logo {
+    max-height: 52px;
+  }
+}
+
+@media (max-width: 420px) {
+  .sponsor-wall-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
